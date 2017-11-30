@@ -354,7 +354,7 @@ def fancy_sums_of_digits(n):
 # Question: I wonder why? This seems really interesting.
 # Question Note: You should read the m3t_tester.py file to see what it does.
 # Real Note: you really should get more sleep. Literally copying a function line by line instead of calling it was
-# freaking stupid. 
+# freaking stupid.
 # ----------------------------------------------------------------------
 if __name__ == '__main__':
     main()
