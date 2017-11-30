@@ -352,6 +352,9 @@ def fancy_sums_of_digits(n):
 # Calls  main  to start the ball rolling.
 # This unusual form is necessary for the special testing we provided.
 # Question: I wonder why? This seems really interesting.
+# Question Note: You should read the m3t_tester.py file to see what it does.
+# Real Note: you really should get more sleep. Literally copying a function line by line instead of calling it was
+# freaking stupid. 
 # ----------------------------------------------------------------------
 if __name__ == '__main__':
     main()
