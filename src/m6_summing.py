@@ -4,9 +4,10 @@ in its simplest classic forms:
    SUMMING:       total = total + number
 
 Authors: David Mutchler, Valerie Galluzzi, Mark Hays, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Nathaniel Nordquist.
+"""  #DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
+import math
 
 def main():
     """ Calls the   TEST   functions in this module. """
@@ -14,10 +15,10 @@ def main():
     run_test_sum_square_roots()
 
 
-def run_test_sum_cosines():
+def run_test_sum_cosines():s
     """ Tests the   sum_cosines   function. """
     # ------------------------------------------------------------------
-    # TODO: 2. Implement this function.
+    # DONE: 2. Implement this function.
     #   It TESTS the  sum_cosines  function defined below.
     #   Include at least **   3   ** tests.
     #
@@ -28,6 +29,24 @@ def run_test_sum_cosines():
     print('--------------------------------------------------')
     print('Testing the   sum_cosines   function:')
     print('--------------------------------------------------')
+
+    # Test 1
+    expected = 0.13416
+    actual = sum_cosines(3)
+    print('Test 1 expected:', expected)
+    print('       actual', actual)
+
+    # Test 2
+    expected = -.51948
+    actual = sum_cosines(4)
+    print('Test 2 expected', expected)
+    print('       actual', actual)
+
+    # Test 3
+    expected = 5.9916
+    actual = sum_cosines(5)
+    print('Test 3 expected', expected)
+    print('       actual', actual)
 
 
 def sum_cosines(n):
@@ -48,7 +67,10 @@ def sum_cosines(n):
     #   No fair running the code of  sum_cosines  to GENERATE
     #   test cases; that would defeat the purpose of TESTING!
     # ------------------------------------------------------------------
-
+    sum = 0
+    for k in range(n+1):
+        sum = sum + math.cos(k)
+    return sum
 
 def run_test_sum_square_roots():
     """ Tests the   sum_square_roots   function. """
