@@ -15,8 +15,8 @@ def main():
     run_test_sum_square_roots()
 
 
-def run_test_sum_cosines():s
-    """ Tests the   sum_cosines   function. """
+def run_test_sum_cosines():
+    #"""Tests the   sum_cosines   function. """
     # ------------------------------------------------------------------
     # DONE: 2. Implement this function.
     #   It TESTS the  sum_cosines  function defined below.
@@ -88,6 +88,25 @@ def run_test_sum_square_roots():
     print('--------------------------------------------------')
 
 
+# Test 1
+    expected = 5.8637
+    actual = sum_cosines(3)
+    print('Test 1 expected:', expected)
+    print('       actual', actual)
+
+    # Test 2
+    expected = 8.6921
+    actual = sum_cosines(4)
+    print('Test 2 expected', expected)
+    print('       actual', actual)
+
+    # Test 3
+    expected = 11.8544
+    actual = sum_cosines(5)
+    print('Test 3 expected', expected)
+    print('       actual', actual)
+
+
 def sum_square_roots(n):
     """
     What comes in:  A non-negative integer n.
@@ -109,7 +128,10 @@ def sum_square_roots(n):
     #   No fair running the code of  sum_square_roots  to GENERATE
     #   test cases; that would defeat the purpose of TESTING!
     # ------------------------------------------------------------------
-
+    sum = 0
+    for k in range(n+1):
+        sum += math.sqrt(2*k)
+    return(sum)
 
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
