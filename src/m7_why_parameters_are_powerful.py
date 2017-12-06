@@ -164,7 +164,7 @@ def run_test_even_better_draw_circles():
     print('--------------------------------------------------')
     print('Testing  draw_circles:  See graphics window')
     print('--------------------------------------------------')
-    even_better_draw_circles(200, 200, 15, 5, 5, 5)
+    even_better_draw_circles(200, 200, 10, 4, 3, 2)
 
 
 def even_better_draw_circles(x, y, n, r, s, t):
