@@ -57,7 +57,7 @@ def distance(point):
     """
     # This code has an error, on purpose.  Do NOT fix it.
     x_squared = point.x * point.x
-    # error: y_squared = point.y * point.x
+    # the error was, before I fixed it: y_squared = point.y * point.x
     y_squared = point.y * point.y
     return math.sqrt(x_squared + y_squared)
 
