@@ -12,8 +12,8 @@ def main():
     """ Calls the   TEST   functions in this module. """
     run_test_draw_circles()
     # Un-comment the next lines when you are ready to use them.
-    # run_test_better_draw_circles()
-    # run_test_even_better_draw_circles()
+    run_test_better_draw_circles()
+    run_test_even_better_draw_circles()
 
 
 # ----------------------------------------------------------------------
@@ -64,7 +64,7 @@ def draw_circles():
     window.close_on_mouse_click()
 
 # ----------------------------------------------------------------------
-# TODO: 2.
+# DONE: 2.
 #   First, RUN this program.  You will see that draw_circles draws
 #   concentric circles whose radii vary by 10.
 #
@@ -92,6 +92,40 @@ def draw_circles():
 #   run_test_draw_circles  may get you started more quickly on your new
 #   better_draw_circles  and  run_test_better_draw_circles.
 # ----------------------------------------------------------------------
+def run_test_better_draw_circles():
+
+    print()
+    print('--------------------------------------------------')
+    print('Testing  draw_better_circles:  See graphics window')
+    print('--------------------------------------------------')
+    draw_better_circles(3)
+    draw_better_circles(6)
+    draw_better_circles(9)
+    print("dang, those circles are fine")
+
+
+def draw_better_circles(n):
+    """
+    -- Constructs a window whose width and height are both 400.
+    -- Constructs and draws 21 rg.Circle objects such that:
+         -- Each is centered at (200, 200)
+         -- They have radii: according to the specification of the test function.
+         -- Pauses 0.05 seconds after rendering each.
+    -- Waits for the user to press the mouse, then closes the window.
+    """
+    # ------------------------------------------------------------------
+    # Students:
+    #   Do NOT touch this function - it has no TO DO in it.
+    # ------------------------------------------------------------------
+    window = rg.RoseWindow(400, 400, 'better circle test')
+
+    center = rg.Point(200, 200)
+    for k in range(21):
+        circle = rg.Circle(center, n * k)
+        circle.attach_to(window)
+        window.render(0.05)  # Pauses for 0.05 seconds after rendering.
+
+    window.close_on_mouse_click()
 
 
 # ----------------------------------------------------------------------
@@ -122,6 +156,40 @@ def draw_circles():
 #   In testing your even_better_draw_circles function,
 #   can you make some fun pictures?
 # ----------------------------------------------------------------------
+def run_test_even_better_draw_circles():
+    # ------------------------------------------------------------------
+    # Test of the creative project.
+    # ------------------------------------------------------------------
+    print()
+    print('--------------------------------------------------')
+    print('Testing  draw_circles:  See graphics window')
+    print('--------------------------------------------------')
+    draw_circles()
+
+
+def even_better_draw_circles(x, y, n, r, s, t):
+    """
+    -- Constructs a window whose width and height are both 400, with an appropriate title.
+    -- Constructs and draws a user-specified number n - int  of rg.Circle objects such that:
+         -- Each is centered at a user-specified rg.Point object with x and y coordinates x - int, y - int.
+         -- They have radii starting at a user-specified number r - int and increasing by a user-specified increment
+          s - int.
+         -- Pauses a user-specified  number of seconds t - int after rendering each.
+    -- Waits for the user to press the mouse, then closes the window.
+    """
+    # ------------------------------------------------------------------
+    # Students:
+    #   Do NOT touch this function - it has no TO DO in it.
+    # ------------------------------------------------------------------
+    window = rg.RoseWindow(400, 400, 'experimentation!')
+
+    center = rg.Point(x, y, )
+    for k in range(n):
+        circle = rg.Circle(center, 10 * k)
+        circle.attach_to(window)
+        window.render(0.05)  # Pauses for 0.05 seconds after rendering.
+
+    window.close_on_mouse_click()
 
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
