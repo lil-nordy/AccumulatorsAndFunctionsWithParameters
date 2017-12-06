@@ -198,7 +198,8 @@ def digits_in_cube(n):
 
 
     # ------------------------------------------------------------------
-    # This is why you need more than 2 hours of sleep:
+    # This is why you need more than 2 hours of sleep: instead of calling the damned function, you copy-pasted that
+    # bad boy. Sad.
     # c = n*n*n
     # if c < 0:
     #     c = -c
@@ -248,6 +249,7 @@ def run_test_digits_in_power():
     print('Test 3 expected:', expected)
     print('       actual', actual)
 
+
 def digits_in_power(n, k):
     """
     What comes in:  Two positive integers, n and k.
@@ -269,6 +271,7 @@ def digits_in_power(n, k):
     # ------------------------------------------------------------------
     integer_power = sum_of_digits(n**k)
     return integer_power
+
 
 def run_test_fancy_sums_of_digits():
     """ Tests the   fancy_sums_of_digits   function. """
